@@ -1,0 +1,159 @@
+:root {
+    --primary: #A5C882;
+    --secondary: #D33F49;
+    --light: #fff;
+    --dark: #000;
+    --diabled: #e7e7e7;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-image: url(https://w.wallhaven.cc/full/2e/wallhaven-2ejddy.jpg);
+    background-size: 100%;
+}
+
+*:first-letter {
+    text-transform: capitalize;
+}
+
+.roundBorder {
+    border-radius: 5px;
+}
+
+.list {
+    margin: 25px auto;
+    padding: 25px;
+    background: rgb(26,255,7);
+    background: rgb(109,204,13);
+    background: linear-gradient(180deg, rgba(109,204,13,1) 0%, rgba(10,203,240,1) 50%, rgba(236,0,113,1) 100%);
+    width: 100%;
+    max-width: 350px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dateRight {
+    display: flex;
+    align-items: center;
+}
+
+#dateNumber {
+    font-size: 50px;
+}
+
+#dateText {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#dateMonth,
+#dateNumber,
+#dateText  {
+    font-weight: bold;
+    color: white;
+}
+
+#dateMonth,
+#dateYear {
+    margin-left: 7px;
+    font-size: 20px;
+    color: white;
+}
+
+form {
+    margin: 20px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 35px auto;
+    grid-column-gap: 15px;
+}
+
+input {
+    border: none;
+    padding-left: 10px;
+    background: rgb(255, 255, 255);
+}
+
+input:focus {
+    outline: none;
+}
+
+.addTaskButton {
+    font-weight: bold;
+    cursor: pointer;
+    background: transparent;
+}
+
+.addTaskButton {
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: var(--diabled);
+}
+
+.orderButton {
+    height: auto;
+    width: auto;
+    border: 3px solid rgb(255, 255, 255);
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+.orderButton::before,
+.orderButton::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: inherit;
+    transition: 0.5s ease;
+}
+.orderButton::before{
+    left: -15px;
+    top: -15px;
+    border-width: 3px 0 0 3px;
+}
+.orderButton::after{
+    right: -15px;
+    top: -15px;
+    border-width: 0 3px 3px 0;
+}
+.orderButton:hover::after,
+.orderButton:hover::before {
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+}
+
+.task {
+    background-color: rgb(24, 23, 24);
+    padding: 15px;
+    margin-top: 15px;
+    color: var(--light);
+    cursor: pointer;
+}
+
+
+.done {
+    background-color: #313334;
+    text-decoration: line-through;
+    color: var(--dark);
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: white;
+}
